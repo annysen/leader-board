@@ -4,10 +4,14 @@
 /* common css  */
 body {
     background-color: #E5E5E5;
-    display: flex;
-    justify-content: center;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
@@ -15,10 +19,12 @@ body {
     background-color: white;
     border-radius: 5px;
     padding: 30px;
+    margin-bottom: 21px;
 }
 
 hr {
     border: 1px solid #D1D1D1;
+    margin-bottom: 27;
 }
 
 /* top player css */
@@ -53,4 +59,118 @@ hr {
 .player p {
     font-weight: 500;
     font-size: 18px;
+}
+
+
+/* blog css  */
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 26px;
+}
+
+.blog {
+    display: flex;
+}
+
+.blog-img img {
+    width: 177px;
+    height: 117px;
+}
+
+.blog-info {
+
+    margin-left: 16px;
+}
+
+.blog-title {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.author {
+    font-weight: 400;
+    font-size: 16px;
+    color: #9F9F9F;
+}
+
+.author a {
+    text-decoration: none;
+    color: #562EFF;
+}
+
+
+/* courses style  */
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.course {
+    width: 270px;
+    height: 250px;
+    padding: 5px;
+
+}
+
+.course-banner img {
+    width: 224px;
+    height: 104px;
+}
+
+.course-instractor {
+    color: #ED6B4F;
+    ;
+}
+
+.course-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.fa-star {
+    font-size: 12px;
+}
+
+.fill-star {
+    color: #FFC014;
+}
+
+.empty-star {
+    color: #AEAEAE;
+}
+
+.course-hour {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FF4A60;
+    background-color: #FFE4E8;
+    width: 95px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+/* responsive css  */
+
+@media only screen and (max-width:688px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player,
+    .blog {
+        flex-direction: column;
+    }
+
+
+
 }
